@@ -69,3 +69,17 @@ int main() {
     for (const Apartment& apt : apartments) {
         cout << "No. Unit: " << apt.unitNumber << ", Harga Sewa: " << fixed << setprecision(2) << apt.price << endl;
     }
+  }
+    //MAHESA DWI PRAYITNO
+    // Menghitung total harga jual jika apartemen dibeli
+    double totalHargaJual = 0;
+    for (const Apartment& apt : apartments) {
+        if (!apt.sold) {
+            totalHargaJual += apt.price;
+        }
+    }
+
+    cout << "\nTotal Harga Jual Jika Semua Apartemen Dibeli: " << fixed << setprecision(2) << totalHargaJual << endl;
+
+    return 0;
+}
